@@ -1,0 +1,221 @@
+@font-face {
+    font-family: 'HelveticaNeue Regular';
+    src: url('../fonts/HelveticaNeueRegular.eot');
+    src: url('../fonts/HelveticaNeueRegular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/HelveticaNeueRegular.woff2') format('woff2'),
+        url('../fonts/HelveticaNeueRegular.woff') format('woff'),
+        url('../fonts/HelveticaNeueRegular.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue Bold';
+    src: url('../fonts/HelveticaNeue-Bold.eot');
+    src: url('../fonts/HelveticaNeue-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/HelveticaNeue-Bold.woff2') format('woff2'),
+        url('../fonts/HelveticaNeue-Bold.woff') format('woff'),
+        url('../fonts/HelveticaNeue-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+*
+{
+margin: 0;
+padding: 0;
+}
+html{
+    font-size: 16px;
+} 
+body {
+    font-family: 'HelveticaNeue', sans-serif;
+    min-height: 100%;
+}
+
+.faq_section{
+    padding: 50px;
+}
+.list-none{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.flex-block{
+    display: flex;
+}
+.justify-between{
+    justify-content: space-between;
+}
+.head-points {
+    max-width: 550px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.head-points li[disabled]{
+    opacity: 0.2;
+}
+.fontt-xl{
+    font-size: 1.8rem;
+}
+.font-lg{
+    font-size: 1.275rem;
+}
+.font-base{
+    font-size: 1.1rem;
+    line-height: 26px;
+}
+.font-regular{
+    font-weight: normal;
+}
+.font-bold{
+    font-weight: bold;
+}
+.frame-block, .rear-shock-block{
+    max-width: 380px;
+}
+.rear-shock-block{
+    padding-left: 60px;
+}
+.frame-block p, .frame-block h4,.rear-shock-block p, .rear-shock-block h4{
+    font-size: 1.1rem;
+    line-height: 26px;
+    margin-bottom: 20px;
+}
+.d-grid{
+    display: grid;
+} 
+.grid-col-2{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.card {
+    margin-bottom: 10px;
+}
+.card h2{
+    text-align: left;
+}
+
+.card-header {
+    padding: 15px 25px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #5d5d5d;
+    max-width: min-content;
+    min-width: 600px;
+    transition: all 0.3s;
+}
+.card-header.active{
+    max-width: max-content;
+    min-width: 100%;
+}
+.card-header:hover, .card-header:focus, .card-header.active{
+    background: linear-gradient(280deg, rgba(34, 193, 195, 0) 0%, rgba(253, 187, 45, 1) 100%);
+}
+.card-body {   
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+.bottom-gradient-style{
+    position: relative;
+}
+.bottom-gradient-style:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    z-index: 99;
+    width: calc(100% - 50px);
+    height: 300px;
+    pointer-events: none;
+}
+.card-body-inner{
+    padding: 15px 25px;
+}
+.rotate-icon {
+    transition: transform 0.3s ease-in-out;
+    width: 20px;
+}
+.rotate-icon.rotate {
+    transform: rotate(-90deg);
+}
+.block_wrapper{
+    max-height: 400px;
+    overflow: auto;
+}
+.block_wrapper::-webkit-scrollbar {
+    width: 0.9em;
+}
+
+.block_wrapper::-webkit-scrollbar-track {
+    background: #dbdbdb;
+    border-radius: 50px;
+}
+
+.block_wrapper::-webkit-scrollbar-thumb {
+    background-color: #fcce00;
+    outline: none;
+    border-radius: 50px;
+}
+
+
+@media only screen and (max-width: 767px) {
+    html {
+        font-size: 10px;
+    }
+    .faq_section {
+        padding: 40px 25px;
+    }
+    .head-points {
+        max-width: 400px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        flex-flow: wrap;
+    }
+    .font-base {
+        font-size: 1.5rem;
+        line-height: 22px;
+    }
+    .font-lg {
+        font-size: 1.4rem;
+    }
+    .rotate-icon{
+        width: 12px;
+    }
+    .frame-block p, .frame-block h4, .rear-shock-block p, .rear-shock-block h4 {
+        font-size: 1.5rem;
+        line-height: 22px;
+        margin-bottom: 10px;
+    }
+    .block_wrapper .flex-block{
+        flex-direction: column;
+    }
+    .frame-block, .rear-shock-block {
+        max-width: 100%;
+    }
+    .rear-shock-block {
+        padding-left: 0;
+        margin-top: 20px;
+    }
+    .card-header, .card-body-inner {
+        padding: 15px 20px;
+    }
+    .bottom-gradient-style:after{
+        height: 180px;
+        width: calc(100% - 35px);
+    }
+    .card-header {
+        max-width: max-content;
+        min-width: 100%;
+    }
+}
